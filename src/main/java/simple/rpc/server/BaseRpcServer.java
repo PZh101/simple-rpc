@@ -1,7 +1,6 @@
 package simple.rpc.server;
 
 
-
 import simple.rpc.RpcMeta;
 import simple.rpc.SerializeUtil;
 
@@ -18,7 +17,7 @@ import java.util.Objects;
  * @author zhoup
  * @see NettyRpcServer
  */
-public abstract class RpcServer {
+public abstract class BaseRpcServer implements RpcServer {
     //存放服务的容器
     //key是对应的接口名称
     protected final static Map<String, Object> serviceContainer = new HashMap<>();
@@ -67,6 +66,4 @@ public abstract class RpcServer {
         return null;
     }
 
-
-    public abstract void start() throws InterruptedException;
 }

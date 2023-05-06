@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author zhoup
  */
-public abstract class BaseRpcRpcProxy implements RpcProxyMethod {
+public abstract class BaseRpcProxy implements RpcProxyMethod {
     protected Class<?> service;
 
     @Override

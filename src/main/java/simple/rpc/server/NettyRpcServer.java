@@ -7,6 +7,7 @@ import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
+import simple.rpc.Const;
 import simple.rpc.PeerId;
 import simple.rpc.RpcMeta;
 import simple.rpc.SerializeUtil;
@@ -20,19 +21,19 @@ import java.util.Objects;
  *
  * @author zhoup
  */
-public class NettyBaseRpcServer extends BaseRpcServer {
+public class NettyRpcServer extends BaseRpcServer {
     private final PeerId peerId;
 
-    public NettyBaseRpcServer() {
+    public NettyRpcServer() {
         super();
-        peerId = PeerId.create(8081);
+        peerId = PeerId.create(Const.defaultPort);
     }
 
-    public NettyBaseRpcServer(PeerId peerId) {
+    public NettyRpcServer(PeerId peerId) {
         this.peerId = peerId;
     }
 
-    public NettyBaseRpcServer nettyRpcServer() {
+    public NettyRpcServer nettyRpcServer() {
         return this;
     }
 

@@ -1,4 +1,4 @@
-package rpc;
+package simple.rpc;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package rpc;
+package simple.rpc;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;

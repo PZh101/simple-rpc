@@ -1,4 +1,4 @@
-package rpc.proxy;
+package simple.rpc.proxy;
 
 import java.lang.reflect.Method;
 

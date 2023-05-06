@@ -1,7 +1,7 @@
-package rpc.client;
+package simple.rpc.client;
 
 
-import rpc.RpcMeta;
+import simple.rpc.RpcMeta;
 
 /**
  * RPC Client

@@ -1,4 +1,4 @@
-package rpc.client;
+package simple.rpc.client;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
@@ -8,10 +8,10 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 import lombok.extern.slf4j.Slf4j;
-import rpc.PeerId;
-import rpc.RpcMeta;
-import rpc.SerializeUtil;
-
+import simple.rpc.Const;
+import simple.rpc.PeerId;
+import simple.rpc.RpcMeta;
+import simple.rpc.SerializeUtil;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Objects;
@@ -22,12 +22,12 @@ import java.util.Objects;
  * @author zhoup
  */
 @Slf4j
-public class NettyRpcClient extends DefaultRpcClient {
+public class NettyRpcClient extends BaseRpcClient {
     private final PeerId peerId;
 
     public NettyRpcClient() {
         super();
-        peerId = PeerId.create(8081);
+        peerId = PeerId.create(Const.defaultPort);
     }
 
     public NettyRpcClient(PeerId peerId) {

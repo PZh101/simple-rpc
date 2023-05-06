@@ -1,8 +1,8 @@
-package rpc.proxy;
+package simple.rpc.proxy;
 
 
 
-import rpc.client.DefaultRpcClient;
+import simple.rpc.client.BaseRpcClient;
 
 import java.util.Objects;
 
@@ -18,9 +18,9 @@ public class RpcProxy {
         this.rpcProxyMethod = rpcProxyMethod;
     }
 
-    public RpcProxy(DefaultRpcClient rpcClient) {
+    public RpcProxy(BaseRpcClient rpcClient) {
         //创建rpc具体的执行逻辑
-        rpcProxyMethod = new DefaultRpcRpcProxyClient(rpcClient);
+        rpcProxyMethod = new DefaultRpcProxyClient(rpcClient);
     }
 
     public <T> T getProxy(Class<T> service) {

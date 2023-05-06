@@ -13,10 +13,10 @@ import java.lang.reflect.Method;
  *
  * @author zhoup
  */
-public class DefaultRpcRpcProxyClient extends BaseRpcRpcProxy {
+public class DefaultRpcProxyClient extends BaseRpcProxy {
     private final RpcClient rpcClient;
 
-    public DefaultRpcRpcProxyClient(RpcClient rpcClient) {
+    public DefaultRpcProxyClient(RpcClient rpcClient) {
         this.rpcClient = rpcClient;
     }
 
